@@ -6,7 +6,7 @@ class tomcat {
 
   service { "tomcat6":
     ensure  => running,
-    enabled => true,
+    enable  => true,
     require => Package["tomcat6"],
   }
 
