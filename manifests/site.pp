@@ -36,3 +36,12 @@ node 'puppetdb' {
    }
 
 }
+
+node default {
+
+  if $::servertype = "tcsrv" {
+    include "tomcat"
+  }
+
+}
+
