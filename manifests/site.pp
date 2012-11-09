@@ -6,6 +6,11 @@ package { "tomcat6":
   ensure => latest,
 }
 
+package { "tomcat6-webapps":
+  ensure  => latest,
+  require => Package["tomcat6"],
+}
+
 service { "tomcat6":
   ensure  => running,
   enable  => true,
