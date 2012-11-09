@@ -1,4 +1,4 @@
-class "tomcat" {
+class tomcat {
 
   package { "tomcat6":
     ensure => latest,
@@ -9,5 +9,6 @@ class "tomcat" {
     enabled => true,
     require => Package["tomcat6"],
   }
+
 }
 
