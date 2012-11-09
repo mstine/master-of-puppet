@@ -39,6 +39,8 @@ node 'puppetdb' {
 
 node default {
 
+  include "firewall"
+
   if $::servertype == "tcsrv" {
     include "tomcat"
   }
