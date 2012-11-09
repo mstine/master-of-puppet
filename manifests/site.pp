@@ -2,14 +2,14 @@ node 'agent' {
 
 notify { "This should work...Hello World! Getting closer...Testing push...it would help if I could type!": }
 
-package { "tomcat-6":
+package { "tomcat6":
   ensure => latest,
 }
 
-service { "tomcat-6":
+service { "tomcat6":
   ensure  => running,
   enable  => true,
-  require => Package["tomcat-6"],
+  require => Package["tomcat6"],
 }
 
 }
