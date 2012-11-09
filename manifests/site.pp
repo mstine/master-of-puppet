@@ -1,6 +1,6 @@
 node 'agent' {
 
-notify { "Hello World! Testing push...": }
+notify { "Hello World! Testing push...again...": }
 
 }
 
