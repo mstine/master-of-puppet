@@ -4,7 +4,7 @@ class tomcat {
     ensure => latest,
   }
 
-  file { "/usr/share/java/tomcat6":
+  file { "/usr/share/java/tomcat6/mysql-connector-java-5.1.22-bin.jar":
     ensure  => file,
     owner   => "root",
     group   => "root",
