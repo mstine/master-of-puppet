@@ -147,7 +147,7 @@
           <Resource name="jdbc/<%=app_db_name%>" auth="Container" type="javax.sql.DataSource"
             maxActive="100" maxIdle="30" maxWait="10000"
             username="<%=app_db_user%>" password="<%=app_db_pw%>" driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://<%=app_db_host%>:3306/<%app_db_name%>"
+            url="jdbc:mysql://<%=app_db_host%>.fluffbox.info:3306/<%=app_db_name%>"
           />
 
         </Context>
