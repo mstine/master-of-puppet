@@ -142,7 +142,7 @@
                prefix="localhost_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
            -->
 
-        <Context>
+        <Context path="" docBase="ROOT" debug="0" reloadable="true">
 
           <Resource name="jdbc/<%=app_db_name%>" auth="Container" type="javax.sql.DataSource"
             maxActive="100" maxIdle="30" maxWait="10000"
