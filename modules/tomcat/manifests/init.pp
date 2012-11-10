@@ -10,5 +10,10 @@ class tomcat {
     require => Package["tomcat6"],
   }
 
+  $mysql_servers = pdbnodequery(['=',['fact','servertype'],'mysql'])
+
+  notify { "MySQL servers: $mysql_servers": }
+
+
 }
 
