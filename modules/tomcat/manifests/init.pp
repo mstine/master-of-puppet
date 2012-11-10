@@ -35,7 +35,7 @@ class tomcat {
     owner   => "root",
     group   => "root",
     mode    => "0644",
-    content => template("tomcat/etc/tomcat6/server.xml")
+    content => template("tomcat/etc/tomcat6/server.xml"),
     require => Package["tomcat6"],
     notify  => Service["tomcat6"],
   }
