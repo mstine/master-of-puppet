@@ -6,7 +6,7 @@ class mysql {
     ensure => latest,
   }
 
-  service { "mysql":
+  service { "mysqld":
     ensure  => running,
     enable  => true,
     require => Package["mysql-server"],
