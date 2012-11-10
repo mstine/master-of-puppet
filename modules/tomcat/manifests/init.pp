@@ -25,6 +25,21 @@ class tomcat {
 
   notify { "MySQL servers: $mysql_servers": }
 
+  $app_db_name = hiera('app_db_name')
+  $app_db_user = hiera('app_db_user')
+  $app_db_pw = hiera('app_db_pw')
+  $app_db_host = $mysql_servers[0]
+
+  file { "/etc/tomcat6/server.xml":
+    ensure  => file,
+    owner   => "root",
+    group   => "root",
+    mode    => "0644",
+    content => template("tomcat/etc/tomcat6/server.xml")
+    require => Package["tomcat6"],
+    notify  => Service["tomcat6"],
+  }
+
 
 }
 

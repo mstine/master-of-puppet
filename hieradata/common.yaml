@@ -1,3 +1,6 @@
 ---
 mysql_password: $uper$3cur3
+app_db_name: todos
+app_db_user: todos
+app_db_pw: todos
 
