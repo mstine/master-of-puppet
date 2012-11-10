@@ -9,7 +9,7 @@ class tomcat {
     owner   => "root",
     group   => "root",
     mode    => "0644",
-    source  => "puppet:///tomcat/user/share/java/tomcat6/mysql-connector-java-5.1.22-bin.jar",
+    source  => "puppet:///modules/tomcat/usr/share/java/tomcat6/mysql-connector-java-5.1.22-bin.jar",
     require => Package["tomcat6"],
     notify  => Service["tomcat6"],
     before  => Service["tomcat6"],
