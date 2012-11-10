@@ -45,5 +45,9 @@ node default {
     include "tomcat"
   }
 
+  if $::servertype == "mysql" {
+    include "mysql"
+  }
+
 }
 
