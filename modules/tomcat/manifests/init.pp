@@ -4,6 +4,17 @@ class tomcat {
     ensure => latest,
   }
 
+  file { "/usr/share/java/tomcat6":
+    ensure  => file,
+    owner   => "root",
+    group   => "root",
+    mode    => "0644",
+    source  => "puppet:///modules/tomcat/user/share/java/tomcat6/mysql-connector-java-5.1.22-bin.jar"
+    require => Package["tomcat6"],
+    notify  => Service["tomcat6"],
+    before  => Service["tomcat6"],
+  }
+
   service { "tomcat6":
     ensure  => running,
     enable  => true,
